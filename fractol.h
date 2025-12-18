@@ -13,8 +13,6 @@
 # define MANDELBROT 1
 # define JULIA 2
 
-# define ERROR_MESSAGE "Please enter \n\t\"./fractol mandelbrot\" or \n\t\"./fractol julia <value_1> <value_2>\"\n"
-
 /*
 ** Linux Key Codes
 ** ESC: 65307
@@ -45,9 +43,10 @@ typedef struct s_fractol
 	double	julia_y;
 } 		t_fractol;
 
+void	print_error(void);
 void	fractol_init(t_fractol *fractol);
 void	fractol_render(t_fractol *fractol);
-double	map(double unscaled_num, double new_min, double new_max, double old_min, double old_max);
+double	map(double unscaled_num, double new_min, double new_max, double old_max);
 double	ft_atof(char *s);
 int		ft_strcmp(char *s1, char *s2);
 int		is_valid_double(char *s);

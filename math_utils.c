@@ -1,8 +1,8 @@
 #include "fractol.h"
 
-double	map(double unscaled_num, double new_min, double new_max, double old_min, double old_max)
+double	map(double unscaled_num, double new_min, double new_max, double old_max)
 {
-	return ((new_max - new_min) * (unscaled_num - old_min) / (old_max - old_min) + new_min);
+	return ((new_max - new_min) * unscaled_num / old_max + new_min);
 }
 
 int	ft_strcmp(char *s1, char *s2)
@@ -13,28 +13,6 @@ int	ft_strcmp(char *s1, char *s2)
 	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
 		i++;
 	return (s1[i] - s2[i]);
-}
-
-int	is_valid_double(char *s)
-{
-	int	has_dot;
-
-	has_dot = 0;
-	if (*s == '+' || *s == '-')
-		s++;
-	while (*s)
-	{
-		if (*s == '.')
-		{
-			if (has_dot)
-				return (0);
-			has_dot = 1;
-		}
-		else if (*s < '0' || *s > '9')
-			return (0);
-		s++;
-	}
-	return (1);
 }
 
 double	ft_atof(char *s)

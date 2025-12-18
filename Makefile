@@ -11,7 +11,7 @@ MLX_LIB = $(MLX_PATH)/libmlx.a
 # Linux Flags: -L<path> -lmlx -lXext -lX11 -lm
 MLX_FLAGS = -L$(MLX_PATH) -lmlx -lXext -lX11 -lm
 
-SRCS = main.c render.c math_utils.c events.c
+SRCS = main.c render.c math_utils.c events.c error.c valid.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

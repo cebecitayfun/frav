@@ -30,8 +30,8 @@ static void	handle_pixel(int x, int y, t_fractol *fractol)
 	int		i;
 	int		clr;
 
-	z[0] = map(x, -2.0, +2.0, 0, WIDTH) * fractol->zoom + fractol->shift_x;
-	z[1] = map(y, +2.0, -2.0, 0, HEIGHT) * fractol->zoom + fractol->shift_y;
+	z[0] = map(x, -2.0, +2.0, WIDTH) * fractol->zoom + fractol->shift_x;
+	z[1] = map(y, +2.0, -2.0, HEIGHT) * fractol->zoom + fractol->shift_y;
 	mandel_vs_julia(z, c, fractol);
 	i = -1;
 	while (++i < fractol->iterations)

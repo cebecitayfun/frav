@@ -48,8 +48,7 @@ int	main(int argc, char **argv)
 		{
 			if (!is_valid_double(argv[2]) || !is_valid_double(argv[3]))
 			{
-				write(1, ERROR_MESSAGE, 95);
-				exit(1);
+				print_error();
 			}
 			fractol.julia_x = ft_atof(argv[2]);
 			fractol.julia_y = ft_atof(argv[3]);
@@ -61,8 +60,7 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		write(1, ERROR_MESSAGE, 95);
-		exit(1);
+		print_error();
 	}
 	return (0);
 }
