@@ -50,6 +50,7 @@ void	fractol_render(t_fractol *fractol);
 double	map(double unscaled_num, double new_min, double new_max, double old_min, double old_max);
 double	ft_atof(char *s);
 int		ft_strcmp(char *s1, char *s2);
+int		is_valid_double(char *s);
 int		close_handler(t_fractol *fractol);
 int		key_handler(int keysym, t_fractol *fractol);
 int		mouse_handler(int button, int x, int y, t_fractol *fractol);
